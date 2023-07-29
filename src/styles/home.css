@@ -1,0 +1,39 @@
+
+body{
+    background:#E4E4F2;
+}
+
+/* Form Style*/
+
+.formHeader{
+    color: white;
+    text-align: center;
+}
+.container{
+    background: linear-gradient(45deg, rgba(2,115,94,1) 25%, rgba(163,191,63,1) 78%);
+    width: 50%;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin: auto;
+    padding: 35px 25px;
+}
+
+.formAddButton{
+    float:right;
+    width: 49%;
+    
+    background: none;
+    border-color: white;
+    color: white;
+}
+.formCancelButton{
+    width: 49%;
+    background: none;
+    border-color: white;
+    color: white;
+}
+
+label{
+    color: white;
+    font-weight: 400;
+}

@@ -1,8 +1,12 @@
 import React from "react";
+import { AddContact } from "./AddContact";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
 export const Home = () => (
+
+	<>
+	<AddContact/>
 	<div className="text-center mt-5">
 		<h1>Hello Rigo!</h1>
 		<p>
@@ -12,4 +16,7 @@ export const Home = () => (
 			If you see this green button, bootstrap is working
 		</a>
 	</div>
+	
+	</>
+	
 );
