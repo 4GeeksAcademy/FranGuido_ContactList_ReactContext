@@ -13,7 +13,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-			Contacts: [],
+			newContacts: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -42,8 +42,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addNewContact: (newItem) =>{
 				const store = getStore();
-				setStore({Contacts: [newItem, ...store.Contacts]})
-				localStorage.setItem("Contacts", JSON.stringify(store.Contacts))
+				setStore({newContacts: [newItem, ...store.newContacts]})
+				localStorage.setItem("contacts", JSON.stringify(store.newContacts))
 			}
 		}
 	};

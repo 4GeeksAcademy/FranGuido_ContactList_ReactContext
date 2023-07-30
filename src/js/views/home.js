@@ -1,38 +1,32 @@
-import React from "react";
+import React, {useState, useEffect, useContext} from "react";
+import { Context } from "../store/appContext";
 import { AddContact } from "./AddContact";
 import { ContactList } from "./ContactList";
 
 import "../../styles/home.css";
 
-const contacts = [
-	{
-	  id: 1,
-	  "name": "Ana",
-	  "email": "ana@email.com",
-	  "phone": "1234",
-	  "address": "City, Country",
-	},
-	{
-	  id: 2,
-	  "name": "Luis",
-	  "email": "luis@email.com",
-	  "phone": "5678",
-	  "address": "City, Country",
-	}
-  ];
 
+export const Home = () => {
 
-export const Home = () => (
+	const {store, actions} = useContext(Context);
+	
+	const [contacts, setContacts] = useState([]);
+	
+	const addContactHandler = (contact) =>{
+		console.log(contact) // Checking
+		// Updating contacts
+		setContacts([...contacts, contact])	
+	};
 
-	 
+	useEffect(() => {actions.addNewContact()}, [contacts]) // [The dependency]
 
-
+	return (
 	<>
-	
-	<AddContact/>
+	<AddContact addContactHandler={addContactHandler} />
 	<ContactList contacts={contacts}/>
-	
-	
 	</>
+
+	)
 	
-);
+	
+};
