@@ -1,19 +1,18 @@
-import React, { useState, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
-import { Link, useParams } from "react-router-dom";
-import { Context } from "../store/appContext";
+import React from 'react';
+import "../../styles/home.css";
 
 
-export const Single = props => {
-	const { store, actions } = useContext(Context);
-	const params = useParams();
-	return (
-		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>
+const cardSytle = {
+ width: "540px",
+  
+};
 
-			<hr className="my-4" />
+export const ContactList = (props) => {
+  console.log(props)
 
-			<div className="container mt-3">
+  const renderContactList = props.contacts.map((contact) => {
+    return (
+      
       <div className="card mb-3" style={cardSytle}>
         <div className="row g-0">
           <div className="col-md-4">
@@ -33,17 +32,24 @@ export const Single = props => {
           </div>
         </div>
       </div>
+      
+    )
+  })
+
+  return (
+    <>
+
+      <div className='container mt-3'>
+      <h3>Contact List</h3>
+      <div className="row">
+      <button type="button" class="newContactButton btn">Add a new contact</button>
+
       </div>
+      {renderContactList}
+        
+      </div>
+      
+    </>
+  )
+}
 
-			<Link to="/">
-				<span className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
-				</span>
-			</Link>
-		</div>
-	);
-};
-
-Single.propTypes = {
-	match: PropTypes.object
-};

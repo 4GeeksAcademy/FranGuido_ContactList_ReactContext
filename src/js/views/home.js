@@ -1,21 +1,37 @@
 import React from "react";
 import { AddContact } from "./AddContact";
-import rigoImage from "../../img/rigo-baby.jpg";
+import { ContactList } from "./ContactList";
+
 import "../../styles/home.css";
+
+const contacts = [
+	{
+	  id: 1,
+	  "name": "Ana",
+	  "email": "ana@email.com",
+	  "phone": "1234",
+	  "address": "City, Country",
+	},
+	{
+	  id: 2,
+	  "name": "Luis",
+	  "email": "luis@email.com",
+	  "phone": "5678",
+	  "address": "City, Country",
+	}
+  ];
+
 
 export const Home = () => (
 
+	 
+
+
 	<>
+	
 	<AddContact/>
-	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
-	</div>
+	<ContactList contacts={contacts}/>
+	
 	
 	</>
 	

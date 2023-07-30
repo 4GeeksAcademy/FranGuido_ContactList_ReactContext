@@ -33,6 +33,13 @@ body{
     color: white;
 }
 
+.newContactButton{
+    width: 100%;
+    background: none;
+    border-color: white;
+    color: white;
+}
+
 label{
     color: white;
     font-weight: 400;
