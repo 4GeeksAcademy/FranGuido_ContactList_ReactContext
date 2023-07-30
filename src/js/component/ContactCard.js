@@ -27,7 +27,7 @@ export const ContactCard = (props) => {
               <p className="card-text">{address}</p>
             </div>
             <div>
-              <i className="fas fa-trash-alt"></i>
+              <i className="fas fa-trash-alt" onClick={() => props.clickHander(id)}></i> 
               <i className="fas fa-pencil-alt"></i>
             </div>
           </div>

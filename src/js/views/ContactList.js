@@ -3,18 +3,17 @@ import { ContactCard } from '../component/ContactCard';
 import "../../styles/home.css";
 
 
-const cardSytle = {
- width: "540px",
-  
-};
-
 export const ContactList = (props) => {
-  console.log(props)
+  console.log(props) // Checking
+
+  const deleteContactHandler = (id) =>{
+    props.getContactID(id)
+  };
 
   const renderContactList = props.contacts.map((contact) => {
     return (
       
-      <ContactCard contact={contact}></ContactCard>
+      <ContactCard contact={contact} clickHander ={deleteContactHandler}></ContactCard>
       
     )
   })
