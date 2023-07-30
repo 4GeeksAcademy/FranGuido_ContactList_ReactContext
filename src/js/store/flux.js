@@ -13,6 +13,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
+
+			sampleContacts: [
+				{
+					name: "Ana Figueroa",
+					email: "ana@email.com",
+					phone: "5555-5555",
+					address: "Nosara, Guanacaste",
+				}
+
+			],
+
 			newContacts: [],
 		},
 		actions: {

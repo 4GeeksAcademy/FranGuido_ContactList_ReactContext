@@ -34,12 +34,15 @@ export const Home = () => {
 	};
 
 
+	
 
 	return (
 	<>
 	
 	<ContactList contacts={contacts} getContactID = {removeContactHandler}/>
 	<AddContact addContactHandler={addContactHandler} />
+	
+	
 	</>
 
 	)
