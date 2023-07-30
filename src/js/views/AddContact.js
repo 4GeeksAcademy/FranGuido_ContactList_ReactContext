@@ -33,12 +33,12 @@ export class AddContact extends React.Component{
     render() {
         return(
             <>
-            <div className='container mt-5'>
+            <div className='container mt-5 mb-1'>
            
             <form onSubmit={this.add}>
 
                 <div className='mb-3'>
-                    <h2 className='formHeader'>Add a new contact</h2>
+                    <h2 className='formHeader mt-1'>Add a new contact</h2>
                 </div>
 
                 <div className="mb-3">

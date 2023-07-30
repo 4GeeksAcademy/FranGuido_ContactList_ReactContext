@@ -20,8 +20,7 @@ body{
 
 .formAddButton{
     float:right;
-    width: 49%;
-    
+    width: 49%;  
     background: none;
     border-color: white;
     color: white;
@@ -34,7 +33,8 @@ body{
 }
 
 .newContactButton{
-    width: 100%;
+    width: 97%;
+    margin-left: 12px;
     background: none;
     border-color: white;
     color: white;
@@ -74,4 +74,10 @@ img{
 .buttonsSection{
     margin-top: 85px;
     margin-right: 15px;
+}
+
+/* Contact list style */
+.contactTitle{
+    color: white;
+    text-align: center;
 }

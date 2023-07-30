@@ -21,9 +21,9 @@ export const ContactList = (props) => {
   return (
     <>
 
-      <div className='container mt-5'>
-      <h3>Contact List</h3>
-      <div className="row">
+      <div className='container mt-5 mb-5'>
+      <h3 className='contactTitle mt-3'>Contact List</h3>
+      <div className="row mt-5">
       <button type="button" class="newContactButton btn">Add a new contact</button>
 
       </div>
