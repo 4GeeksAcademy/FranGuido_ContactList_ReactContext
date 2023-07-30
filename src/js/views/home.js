@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useContext} from "react";
 import { Context } from "../store/appContext";
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid"; //Give ID to each data entry
 import { AddContact } from "./AddContact";
 import { ContactList } from "./ContactList";
 
@@ -37,8 +37,9 @@ export const Home = () => {
 
 	return (
 	<>
-	<AddContact addContactHandler={addContactHandler} />
+	
 	<ContactList contacts={contacts} getContactID = {removeContactHandler}/>
+	<AddContact addContactHandler={addContactHandler} />
 	</>
 
 	)
